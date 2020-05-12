@@ -168,7 +168,6 @@ paths:
       tags:
       - "pedidos"
       summary: "Find purchase order by ID"
-      description: "For valid response try integer IDs with value >= 1 and <= 10.         Other values will generated exceptions"
       operationId: "getOrderById"
       produces:
       - "application/json"

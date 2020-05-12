@@ -4,7 +4,7 @@ Rest API using express, nodejs, MySQL and Javascript info: description: "Add use
 GITHUB REPOSITORY => https://github.com/NataliaGorini/Delilah-Resto.git
 
 #DATABSE SQL:
-You can create your DB install mysql => npm I mysql2.
+You can create your DB install mysql => npm i mysql2.
 After that you need to run the queries available on the file "db.sql" on the repository
 
 

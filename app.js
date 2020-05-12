@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-// const cors = require('cors');
 const {getProducts, addProducts,updateProduct, deleteProduct} = require('./productos');
 const {addNewUser, login, allUsers, updateUserData} = require('./users');
 const {authenticateUser, isAdmin} = require('./middlewares');
@@ -9,7 +8,6 @@ const {createOrder, seeOrderbyUser, allOrdersAdmin, updateStatus} = require('./p
 
 
 app.use(bodyParser.json());
-// app.use(cors);
 app.listen(3000, () => {console.log('servidor iniciado')})
 
 

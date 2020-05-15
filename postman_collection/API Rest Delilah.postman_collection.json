@@ -1,0 +1,431 @@
+{
+	"info": {
+		"_postman_id": "3a9547df-baf7-451a-90bc-7e617283dde8",
+		"name": "API Rest Delilah",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/usuarios",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nickname\": \"Mar\",\n\t\"fullname\" : \"Martina Zeta\",\n\t\"password\" : \"seguro3\",\n\t\"email\" : \"mztg@hotmail.com\",\n\t\"phone\" : 216383903,\n\t\"address\" : \"calle 133 5145\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/usuarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/usuarios/login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Im5pY2tuYW1lIjoiQWRtaW5pc3RyYWRvciIsInBhc3N3b3JkIjoiMjczNk5hdCIsImlzQWRtaW4iOjF9LCJpYXQiOjE1ODg0NzI4Njh9.AFVF0203rw6FRRz9x7IOwj7-52K5DX-8K-riIaOeVvE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nickname\" : \"Administrador\",\n\t\"password\" : \"2736Nat\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/usuarios/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"usuarios",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/usuarios/usuario/2",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Im5pY2tuYW1lIjoiUGF1bGEiLCJwYXNzd29yZCI6InRlbmdvSGFtYnJlIn0sImlhdCI6MTU4OTIzNTIwMH0.KXISAVu7n5S9YoQBTWFov6By4Aad6KWQZzCq_ggHNp4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"address\": \"jose Hernandez 890\",\n\t\"phone\": 29587689\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/usuarios/usuario/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"usuarios",
+						"usuario",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/usuarios",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Im5pY2tuYW1lIjoiQWRtaW5pc3RyYWRvciIsInBhc3N3b3JkIjoiMjczNk5hdCJ9LCJmaWx0ZXJBZG1pbiI6eyJpc0FkbWluIjoxfSwiaWF0IjoxNTg5MjM0MjA2fQ.YRMSv_5Cw8Pkk7kyeQymrWfUKgKnhtooaoehtnM8sL8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/usuarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/productos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/productos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/productos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"dish\": \"GiveMe Potatos\",\n\t\"ingredients\" : \"papas rusticas con crocante de harina de maiz\",\n\t\"price\" : 150\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/productos/producto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"productos",
+						"producto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/productos/1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Im5pY2tuYW1lIjoiUGF1bGEiLCJwYXNzd29yZCI6InRlbmdvSGFtYnJlIn0sImlhdCI6MTU4ODUzMjk1N30.ooG36cSmmBki8FBmIMly6c657NWhw0hEgLN_GlE8BHE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "bearer",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Im5pY2tuYW1lIjoiQWRtaW5pc3RyYWRvciIsInBhc3N3b3JkIjoiMjczNk5hdCJ9LCJmaWx0ZXJBZG1pbiI6eyJpc0FkbWluIjoxfSwiaWF0IjoxNTg4NTI5NzA5fQ.K_NOwT7pWbwuGtyckU8MfHwJSQ0YCpAo4nsPa0XKRx4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"price\" : 380\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/productos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"productos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/productos/producto/7",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Im5pY2tuYW1lIjoiQWRtaW5pc3RyYWRvciIsInBhc3N3b3JkIjoiMjczNk5hdCJ9LCJmaWx0ZXJBZG1pbiI6eyJpc0FkbWluIjoxfSwiaWF0IjoxNTg5MjQyODQxfQ.aPzjsdI3V1H2ZqECtExass-rJQI3Juzy1a7AOKJWAa0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/productos/producto/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"productos",
+						"producto",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/pedidos/pedido",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Im5pY2tuYW1lIjoiUGF1bGEiLCJwYXNzd29yZCI6InRlbmdvSGFtYnJlIn0sImlhdCI6MTU4OTE1Njc0MX0.aAa2YFl3e0KD9AIk2dC2tUvQXjdv9nTIJ4gPcPrhZS8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"user_id\": 2,\n\t\"payment\": \"cash\",\n\t\"product_id\": 3,\n\t\"quantity\": 4\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/pedidos/pedido",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"pedidos",
+						"pedido"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/pedidos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Im5pY2tuYW1lIjoiQWRtaW5pc3RyYWRvciIsInBhc3N3b3JkIjoiMjczNk5hdCJ9LCJmaWx0ZXJBZG1pbiI6eyJpc0FkbWluIjoxfSwiaWF0IjoxNTg5MjIyNzg5fQ.0Ufox6OUiMPb3Eho5gVz32bmnc_RRsvDe_TIe21E3aM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/pedidos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"pedidos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/pedidos/pedido/3",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Im5pY2tuYW1lIjoiQWRtaW5pc3RyYWRvciIsInBhc3N3b3JkIjoiMjczNk5hdCJ9LCJmaWx0ZXJBZG1pbiI6eyJpc0FkbWluIjoxfSwiaWF0IjoxNTg5MjMwMDMxfQ.bf6K4VJUN5kQMLXPkdU3_EZR8m7xTxv2ntCkwg7UcI4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"status\":\"cocinando\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/pedidos/pedido/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"pedidos",
+						"pedido",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/pedidos/pedido/103",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Im5pY2tuYW1lIjoiQWRtaW5pc3RyYWRvciIsInBhc3N3b3JkIjoiMjczNk5hdCJ9LCJmaWx0ZXJBZG1pbiI6eyJpc0FkbWluIjoxfSwiaWF0IjoxNTg5MjQyODQxfQ.aPzjsdI3V1H2ZqECtExass-rJQI3Juzy1a7AOKJWAa0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/pedidos/pedido/103",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"pedidos",
+						"pedido",
+						"103"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "da36102a-364a-453b-9c9c-4e543245f024",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "867e29ef-2d43-477d-9f9c-ce68f9234efa",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

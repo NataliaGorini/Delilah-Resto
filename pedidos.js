@@ -58,9 +58,15 @@ module.exports = {
     updateStatus: async (req,res) => {
         const status = req.body.status
         const {id} = req.params
-        const changeStatus = db.query(`UPDATE pedidos_productos SET status = '${status}' WHERE id = ${id}`)
+        const changeStatus = db.query(`UPDATE pedidos_productos SET status = '${status}' WHERE id = ${id}`, {type: Sequelize.QueryTypes.UPDATE})
             .then(result => console.log(result) || res.status(200).json({result: 'pedido actualizado'}))
             .catch(error => console.log(error) || res.status(400).json({error : 'no se pudo actualizar'}))
         consolelog(changeStatus)
+    },
+    deleteOrder: (req, res) => {
+        const {order_id} = req.params
+        const cancelOrder = db.query(`DELETE FROM pedidos_productos WHERE order_id = ${order_id}`,{type: Sequelize.QueryTypes.DELETE})
+            .then(result => console.log(result) || res.status(200).json({result: 'orden cancelada'}))
+            .catch(error => console.log(error) || res.status(400).json({error : 'algo salio mal'}))
     }
 }

@@ -3,8 +3,8 @@ const app = express();
 const bodyParser = require('body-parser');
 const {getProducts, addProducts,updateProduct, deleteProduct} = require('./productos');
 const {addNewUser, login, allUsers, updateUserData} = require('./users');
-const {authenticateUser, isAdmin} = require('./middlewares');
-const {createOrder, seeOrderbyUser, allOrdersAdmin, updateStatus} = require('./pedidos')
+const {authenticateUser, isAdmin, checkOrderStatus} = require('./middlewares');
+const {createOrder, seeOrderbyUser, allOrdersAdmin, updateStatus, deleteOrder} = require('./pedidos')
 
 
 app.use(bodyParser.json());
@@ -30,3 +30,4 @@ app.post('/pedidos/pedido', authenticateUser,createOrder)
 
 //PEDIDOS-PRODUCTOS ADMIN -----------------
 app.put('/pedidos/pedido/:id', authenticateUser, isAdmin, updateStatus)
+app.delete('/pedidos/pedido/:order_id', authenticateUser, checkOrderStatus, deleteOrder)
